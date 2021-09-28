@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="Navigationstyle.css">
+<script type="text/javascript">
+function validform()
+{
+	var aid=document.myform.aid.value;
+	var apass=document.myform.apass.value;
+	
+	if(aid==null|| aid==""){
+		alert("Enter UserId");
+		return false;
+	}
+	else if(apass==null|| apass==""){
+		alert("Enter Password");
+		return false;
+	}
+	else if(apass.length<6){
+		alert("Password must be greater than 6");
+		return false;
+	}	
+else{
+	open("wel.html")
+}
+}
+</script>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+.button {
+  background-color: #242ea6;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body bgcolor="white" ><center>
+<table border="1" style="background-color:#aeeaf4">
+<form name="myform" method="post" onsubmit="validform()">
+<tr><th colspan="2">User Login</th></tr>
+<tr><th colspan="2"><img src="login.jpg" height="200" width="200"></th></tr>
+<tr><td>Enter User Id:</td><td><input type="text" name="aid"></td></tr>
+<tr><td>Enter Password:</td><td><input type="password" name="apass"></td></tr>
+<br>
+<center><tr><th colspan="2"><input type="submit"  class="button" value="Register" onClick="validform()"></th></tr></center>
+</form>
+</table>
+<div id="msg"></div>
+</body></center>
+</html>

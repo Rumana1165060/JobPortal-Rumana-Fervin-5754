@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Us</title>
+<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="Navigationstyle.css">
+<script type="text/javascript">
+function validform()
+{
+	var fn=document.myform.fn.value;
+	var aid=document.myform.aid.value;
+	var txt=document.myform.txt.value;
+	if(fn==null|| fn==""){
+		alert("Name cannot be blank");
+	return false;
+	}
+	if(isNaN(aid)){
+		document.getElementById("numloc").innerHTML="Enter a numeric value only";
+		return false;
+		}
+		else {
+			return true;
+		}
+	 if (confirm("Save your Response")) {
+		    txt = "Save your Response";
+		  } else {
+		    txt = "";
+		  }
+}
+</script>
+<style type="text/css">
+.button {
+  background-color: #242ea6;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body bgcolor="powderblue"><center>
+<table>
+<td><div class="topnav"><a href="Welcome.html">&#160;&#160;&#160;Home&#160;&#160;&#160;</a></div></td>
+<td><div class="navbar">
+<div class="dropdown">
+    <button class="dropbtn">&#160;Job List&#160;
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="datascience.html">Data Science</a>
+      <a href="digitalmarketing.html">Digital Marketing</a>
+      <a href="medicalprofessionals.html">Medical Professionals</a>
+      <a href="machinelearningexperts.html">Machine Learning Experts</a>
+      <a href="blockchaindevelopers.html">Blockchain Developers</a>
+      <a href="softwareengineers.html">Software Engineers</a>
+      <a href="charteredaccountant.html">Chartered Accountant</a>
+      <a href="lawyers.html">Lawers</a> 
+    </div>
+  </div>
+</div></td>
+<!--<td><div class="topnav"><a href="jobdetail.html">&#160;Job Detail&#160;</a></div></td> -->
+<td><div class="topnav"><a href="contactus.html">&#160;Contact Us&#160;</a></div></td>
+<!--  <td><div class="topnav"><a href="register.html">&#160;&#160;&#160;Register&#160;&#160;&#160;</a></div></td>-->
+<td><div class="topnav"><a href="logout.html">&#160;&#160;&#160;Logout&#160;&#160;&#160;</a></div></td>
+</table></center>
+<br>
+<br>
+<br>
+<table>
+<tr><th colspan="1"><center><img src="keep.png" height="300" width="1350"></center></th></tr>
+</table>
+<table border="1" align="left" height="200" width="500">
+<td><b>Give us a call</b>
+<br>
+<br>
+<br>
+Our E-On Career Experts are always willing to give you a listening ear! 
+We are here to serve you everyday, from Mon - Sun, even on holidays.
+ We are available from 8.00am to 8.00pm, please feel free to reach us anytime.</td>
+</table>
+<table border="1" align="right" height="200" width="500">
+<td><b>Raise a Ticket</b>
+<br>
+<br>
+<br>
+Are you facing a technical issue or a glitch? We are sorry but don't worry we will get it resolved for you right away.
+Go ahead, raise a ticket and our Support Team will connect with you shortly.
+</table>
+<br>
+<br>
+<br>
+<center><table>
+<tr><th colspan="1"><b>Drop Us a Message</b></th></tr>
+</table></center>
+<form name="myform" method="post" onsubmit="return validform()">
+<table align="left" height="300" width="500">
+<tr><th colspan="1"><input type="text" name="fn" placeholder="Full Name"></th></tr>
+</table>
+<table align="right" height="300" width="500">
+<tr><th colspan="1"><input type="text" name="aid" placeholder="Mobile Number"></th></tr>
+<span id="numloc"></span>
+</table></form>
+<br>
+<table align="center" height="200" width="500">
+<center><textarea rows="4" cols="50" placeholder="Your Message"></textarea>
+</center>
+<tr><th colspan="2"><input type="submit" class="button" name="txt" value="Submit" onClick="validform()"></th></tr>
+<p id="demo"></p>
+</table>
+<center>
+<table align="center" height="200" width="500">
+<td><b>Location</b>
+<br>
+<br>
+<br>
+#401, Kushwah Chambers, 702 Makwana Rd ,
+Gamdevi, Marol
+Andheri (E), Mumbai-59
+</td>
+</table>
+<table align="center" height="200" width="500">
+<td><b>Tollfree</b>
+<br>
+<br>
+<br>
+1800 120 1196
+</td>
+</table>
+<table align="center" height="200" width="500">
+<td><b>Email</b>
+<br>
+<br>
+<br>
+wecare@futurenow.com
+</td>
+</table>
+</center>
+</body>
+</html>
