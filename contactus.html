@@ -11,7 +11,7 @@ function validform()
 	var fn=document.myform.fn.value;
 	var aid=document.myform.aid.value;
 	var txt=document.myform.txt.value;
-	if(fn==null|| fn==""){
+	if(fn==""){
 		alert("Name cannot be blank");
 	return false;
 	}
@@ -108,9 +108,9 @@ Go ahead, raise a ticket and our Support Team will connect with you shortly.
 </table></form>
 <br>
 <table align="center" height="200" width="500">
-<center><textarea rows="4" cols="50" placeholder="Your Message"></textarea>
+<center><textarea name="msg" rows="4" cols="50" placeholder="Your Message"></textarea>
 </center>
-<tr><th colspan="2"><input type="submit" class="button" name="txt" value="Submit" onClick="validform()"></th></tr>
+<tr><th colspan="2"><input type="submit" class="button" name="txt" value="Submit"></th></tr>
 <p id="demo"></p>
 </table>
 <center>

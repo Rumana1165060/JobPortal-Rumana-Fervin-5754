@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Admin Login</title>
 <link rel="stylesheet" href="list.css">
 <link rel="stylesheet" href="Navigationstyle.css">
 <script type="text/javascript">
@@ -12,15 +12,11 @@ function validform()
 	var apass=document.myform.apass.value;
 	
 	if(aid==""){
-		alert("Enter UserId");
+		alert("Enter AdminId");
 		return false;
 	}
 	else if(apass==""){
 		alert("Enter Password");
-		return false;
-	}
-	else if(apass.length<6){
-		alert("Wrong password");
 		return false;
 	}	
 }
@@ -49,10 +45,10 @@ th, td {
 </head>
 <body bgcolor="white" ><center>
 <table border="1" style="background-color:#aeeaf4">
-<form name="myform" action="UserLog" onsubmit="return validform()">
-<tr><th colspan="2">User Login</th></tr>
+<form name="myform" action="AdminLogin" onsubmit="return validform()">
+<tr><th colspan="2">Admin Login</th></tr>
 <tr><th colspan="2"><img src="login.jpg" height="200" width="200"></th></tr>
-<tr><td>Enter User Id:</td><td><input type="text" name="aid"></td></tr>
+<tr><td>Enter Admin Id:</td><td><input type="text" name="aid"></td></tr>
 <tr><td>Enter Password:</td><td><input type="password" name="apass"></td></tr>
 <br>
 <center><tr><th colspan="2"><input type="submit"  class="button" value="Login"></th></tr></center>

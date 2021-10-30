@@ -1,0 +1,45 @@
+ use jobportal;
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_jobportal |
++---------------------+
+| applying            |
+| job                 |
+| register            |
++---------------------+
+3 rows in set (0.09 sec)
+
+mysql> select * from register;
++------+--------+--------+------+-----------+-----------+--------------------+---------------+
+| id   | fname  | lname  | aid  | password1 | password2 | email              | num           |
++------+--------+--------+------+-----------+-----------+--------------------+---------------+
+| 3581 | rumana | fervin | 5754 | 123456    | 123456    | 9600268096         | abc@gmail.com |
+| 9106 | Rumana | Fervin | 1    | 123456    | 123456    | rumanver@gmail.com | 9600268096    |
+| 4245 | Ahamed | Anver  | 5752 | 123456    | 123456    | a@gmail.com        | 9677268796    |
++------+--------+--------+------+-----------+-----------+--------------------+---------------+
+3 rows in set (0.08 sec)
+
+mysql> select * from applying;
++------+------+----------+
+| sid  | cid  | dte      |
++------+------+----------+
+| 1    | NULL | 22-10-21 |
+| 2    | NULL | 22-10-21 |
+| NULL | NULL | 22-10-21 |
+| NULL | NULL | 22-10-21 |
+| 142  | NULL | 22-10-21 |
+| 465  | 5752 | 22-10-21 |
++------+------+----------+
+6 rows in set (0.00 sec)
+
+mysql> select * from job;
++------+---------------------------+-----------------+----------+---------+
+| sid  | title                     | company         | location | status  |
++------+---------------------------+-----------------+----------+---------+
+| 142  | Machine Learning Experts  | Robots Tech     | USA      | applied |
+| 465  | Digital Marketing Analyst | FB Technologies | Chennai  | applied |
++------+---------------------------+-----------------+----------+---------+
+2 rows in set (0.00 sec)
+
+

@@ -11,59 +11,59 @@ function validform()
 	var fname=document.myform.fname.value;
 	var lname=document.myform.lname.value;
 	var aid=document.myform.aid.value;
-	var password1=document.myform.password.value;
+	var password1=document.myform.password1.value;
 	var password2=document.myform.password2.value;
 	var num=document.myform.num.value;
-	var x=document.myform.email.value;
-	var ampposition=x.indexOf('@');
-	var dotpositon=x.indexOf('.');
-	 if(fname==null&&lname==null|| fname==""&&lname==""){
-		alert("Name cannot be blank");
-	return false;
-	}
-	else if(lname==null||lname==""){
-		alert("Enter Last Name");
-		return false;
-	}
-	else if(aid==null|| aid==""){
-		alert("Enter UserId");
-		return false;
-	}
-	else if(password1==null|| password1==""){
-		alert("Enter Password");
-		return false;
-	}
-	else if(password1.length<6){
-		alert("Password must be greater than 6");
-		return false;
-	}
-	else if(password2==null|| password2==""){
-		alert("Reenter Password");
-		return false;
-	}
-	else if(password1!=password2){
-		alert("Password must be same");
-		return false;
-	}
-	/* if(x==null|| x==""){
-			alert("Enter Email Id");
+	var email=document.myform.email.value;
+	var ampposition=email.indexOf('@');
+	var dotpositon=email.indexOf('.');
+	
+	 if(fname==""){
+			alert("Name cannot be blank");
 			return false;
 		}
-		else if(ampposition<1||dotposition<ampposition+2||dotposition+2>=x.length)
+	 else if(lname==""){
+			alert("Enter Last Name");
+			return false;
+		}
+		else if(aid==""){
+			alert("Enter UserId");
+			return false;
+		}
+		else if(password1==""){
+			alert("Enter Password");
+			return false;
+		}
+		else if(password1.length<6){
+			alert("Password must be greater than 6");
+			return false;
+		}
+		else if(password2==""){
+			alert("Reenter Password");
+			return false;
+		}
+		else if(password1!=password2){
+			alert("Password must be same");
+			return false;
+		}
+		 if( email==""){
+				alert("Enter Email Id");
+				return false;
+			}
+		 if(ampposition<1||dotposition<ampposition+2||dotposition+2>=email.length)
 		 {
 		alert("Email is not valid");
 		return false;
-		}else{
-			return true;
-		}*/
-		else if(isNaN(num)){
-		alert("Please Enter a Numeric");
-		num.focus();
-		
+		}
+		 else if(isNaN(num)){
+			alert("Please Enter a Numeric");
+			num.focus();
+			return false;
+		}
+	else{
+		open("login.html")
 	}
-else{
-	open("login.html")
-}
+		
 }
 	/*var num=document.myform.num.value;
 	if(isNaN(num)){
@@ -82,7 +82,7 @@ table, th, td {
 th, td {
   padding: 10px;
 }
-.button {
+.btn {
   background-color: #242ea6;
   border: none;
   color: black;
@@ -97,23 +97,24 @@ th, td {
 </style>
 </head>
 <body bgcolor="white" ><center>
+<form name="myform" action="Register" onsubmit="return validform()">
 <table border="1" style="background-color:#aeeaf4">
-<form name="myform" method="post" onsubmit="validform()">
+
 <tr><th colspan="2">Register Here</th></tr>
 <tr><th colspan="2"><img src="register.jpg" height="200" width="200"></th></tr>
 <tr><td>First Name:</td><td><input type="text" name="fname"></td></tr>
 <tr><td>Last Name:</td><td><input type="text" name="lname"></td></tr>
 <tr><td>Enter User Id:</td><td><input type="text" name="aid"></td></tr>
-<tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+<tr><td>Password:</td><td><input type="password" name="password1"></td></tr>
 <tr><td>Reenter Password:</td><td><input type="password" name="password2"></td></tr>
 <tr><td>Email:</td><td><input type="text" name="email"></td></tr>
 <br>
-<tr><td>Number:</td><td><input type="text" id="num"></td></tr>
+<tr><td>Number:</td><td><input type="text" name="num"></td></tr>
 <br>
-</form>
-<center><tr><th colspan="2"><input type="submit"  class="button" value="Register" onClick="validform()"></th></tr></center>
-</form>
+<tr><th colspan="2" align="center"><input type="submit" class="btn"   value="Register"></th></tr>
 </table>
+</form>
+
 <div id="msg"></div>
-</body></center>
+</body>
 </html>

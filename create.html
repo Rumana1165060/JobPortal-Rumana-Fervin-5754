@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Job List</title>
+<link rel="stylesheet" href="list.css">
+<link rel="stylesheet" href="Navigationstyle.css">
+<style type="text/css">
+.btn {
+  background-color: #242ea6;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+function valid(){
+	var title= document.frm.title.value;
+	var company= document.frm.company.value;
+	var location= document.frm.location.value;
+	if(title==""){
+		alert("Enter Title");
+		return false;
+		}
+	else if(company==""){
+		alert("Enter Company");
+		return false;
+		}
+	else if(location==""){
+		alert("Enter Location");
+		return false;
+		}
+}
+
+</script>
+
+</head>
+<center>
+<body>
+<table>
+<td><div class="topnav"><img src="title.png" height="50" width="50"></div></td><br>
+<td><div class="topnav"><a href="adminhome.html">&#160;&#160;&#160;Home&#160;&#160;&#160;</a></div></td>
+<td><div class="topnav"><a href="create.html">&#160;Add Job List&#160;</a></div></td>
+<td><div class="topnav"><a href="update.html">&#160;Update Job List&#160;</a></div></td>
+<td><div class="topnav"><a href="delete.html">&#160;Delete Job List&#160;</a></div></td>
+<td><div class="topnav"><a href="showjob.jsp">&#160;Job Status&#160;</a></div></td>
+<td><div class="topnav"><a href="adminlogin.html">&#160;&#160;&#160;Logout&#160;&#160;&#160;</a></div></td>
+</table>
+<form name="frm" action="AddJob" onsubmit="return valid()">
+<table border="1" style="background-color:#aeeaf4">
+
+<tr><th colspan="2">Add New Job</th></tr>
+<tr><td>Enter Job Title</td><td><input type="text" name="title"></td></tr>
+<tr><td>Enter Company</td><td><input type="text" name="company"></td></tr>
+<tr><td>Enter Location</td><td><input type="text" name="location"></td></tr>
+<tr><th colspan="2" align="center"><input type="submit" class="btn"   value="Add"></th></tr>
+</table>
+</form>
+
+
+</body></center>
+</html>
